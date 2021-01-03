@@ -1,0 +1,72 @@
+/* <div className="App">
+      <h1>Timer</h1>
+      <h1>{title}</h1>
+      <div className="timer">
+        <span>{minutes}</span>
+        <span>:</span>
+        <span>{seconds}</span>
+      </div>
+      <div className="buttons">
+        {!isRunning && <button onClick={onStart}>Start</button>}
+        {isRunning && <button onClick={stopTimer}>Stop</button>}
+        <button onClick={resetTime}>Reset</button>
+      </div>
+    </div> */
+body {
+  background-color: rgb(235, 215, 255);
+}
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.heading-title {
+  color: red;
+  font-weight: 200;
+  display: inline-block;
+  font-family: cursive;
+  font-size: 3rem;
+}
+.heading-title:hover {
+  transform: skewY(-2deg);
+  color: white;
+  background-color: red;
+}
+.heading-subtitle {
+  font-family: sans-serif;
+  font-weight: 200;
+  color: rebeccapurple;
+}
+.timer > span {
+  font-size: 9rem;
+  font-family: cursive;
+  color: rebeccapurple;
+}
+.timer > span:hover {
+  font-size: 9rem;
+  font-family: cursive;
+  color: rgb(0, 2, 114);
+}
+.buttons {
+  display: flex;
+}
+button {
+  width: 10rem;
+  height: 3rem;
+  margin: 2rem;
+  font-size: larger;
+  font-weight: 300;
+  font-family: cursive;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  box-shadow: 3px 3px 10px black;
+  cursor: pointer;
+}
+button:hover {
+  color: rebeccapurple;
+  background-color: yellow;
+}
+button:active {
+  box-shadow: none;
+}
