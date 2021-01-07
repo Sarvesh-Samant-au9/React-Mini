@@ -1,0 +1,44 @@
+/* .displayFlex {
+  display: flex;
+  min-height: 100vh;
+  min-width: 90vw;
+  margin: auto;
+  background-color: aliceblue;
+  justify-content: center;
+  align-items: center;
+}
+.mainClass {
+  min-height: 70vh;
+  padding: 4vw;
+  border: 2px solid red;
+  margin: 20px;
+  width: 30vw;
+}
+.textBox {
+  width: 50vw;
+  color: red;
+  background-color: honeydew;
+}
+textarea {
+  width: 40vw;
+  height: 50vh;
+  resize: none;
+}
+blockquote {
+  font-size: larger;
+  color: red;
+  padding: 10px;
+  font-family: cursive;
+  margin: 0;
+  background-color: rgb(255, 228, 242);
+  border-radius: 2px;
+  border-left: 2px solid red;
+} */
+
+.app {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  background-color: rebeccapurple;
+  min-height: 100vh;
+}
