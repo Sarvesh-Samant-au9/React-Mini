@@ -1,7 +1,10 @@
 import {
+  CLEAR_CONTACT,
   CREATE_CONTACT,
   DELETE_CONTACT,
+  DELETE_SELECTED_CONTACT,
   GET_CONTACT,
+  SELECT_CONTACT,
   UPDATE_CONTACT,
 } from "../Type/actionType";
 
@@ -31,5 +34,24 @@ export const deleteContact = (id) => {
   return {
     type: DELETE_CONTACT,
     payload: id,
+  };
+};
+
+export const selectAllContact = (id) => {
+  return {
+    type: SELECT_CONTACT,
+    payload: id,
+  };
+};
+
+export const removeAllContact = () => {
+  return {
+    type: CLEAR_CONTACT,
+  };
+};
+
+export const deleteAllContact = () => {
+  return {
+    type: DELETE_SELECTED_CONTACT,
   };
 };

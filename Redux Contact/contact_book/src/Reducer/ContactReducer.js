@@ -1,7 +1,10 @@
 import {
+  CLEAR_CONTACT,
   CREATE_CONTACT,
   DELETE_CONTACT,
+  DELETE_SELECTED_CONTACT,
   GET_CONTACT,
+  SELECT_CONTACT,
   UPDATE_CONTACT,
 } from "../Type/actionType";
 const initialState = {
@@ -238,6 +241,7 @@ const initialState = {
     },
   ],
   contactId: null,
+  selectedContacts: [],
 };
 export const contactReducer = (state = initialState, action) => {
   switch (action.type) {
@@ -277,7 +281,22 @@ export const contactReducer = (state = initialState, action) => {
           (contact) => contact.id != action.payload
         ),
       };
-
+    case SELECT_CONTACT:
+      return {
+        ...state,
+        selectedContacts: action.payload,
+      };
+    case CLEAR_CONTACT:
+      return {
+        ...state,
+        selectedContacts: [],
+      };
+    case DELETE_SELECTED_CONTACT:
+      return {
+        ...state,
+        contacts: [],
+        selectedContacts: [],
+      };
     default:
       return state;
   }
