@@ -1,0 +1,12 @@
+$theme-colors: (
+  "primary": rebeccapurple,
+  "danger": #fd2e2e,
+  "success": green,
+  "warning": rgb(110, 110, 2),
+);
+
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+body {
+  padding-top: 5rem;
+}
