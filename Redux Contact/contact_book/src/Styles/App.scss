@@ -5,7 +5,8 @@
 tr:hover .action {
   opacity: 1;
 }
-tbody td a {
+tbody td span {
+  cursor: pointer;
   color: black;
   &:hover {
     color: red;

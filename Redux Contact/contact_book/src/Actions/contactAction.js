@@ -1,5 +1,6 @@
 import {
   CREATE_CONTACT,
+  DELETE_CONTACT,
   GET_CONTACT,
   UPDATE_CONTACT,
 } from "../Type/actionType";
@@ -23,5 +24,12 @@ export const updatedContact = (obj) => {
   return {
     type: UPDATE_CONTACT,
     payload: obj,
+  };
+};
+
+export const deleteContact = (id) => {
+  return {
+    type: DELETE_CONTACT,
+    payload: id,
   };
 };

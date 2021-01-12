@@ -1,11 +1,13 @@
 import React from "react";
 import Avatar from "react-avatar";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import { deleteContact } from "../Actions/contactAction";
 
 const Contact = () => {
   const contactInfo = useSelector((state) => state.contacts.contacts);
   console.log(contactInfo);
+  const dispatch = useDispatch();
   return (
     <>
       {contactInfo.map(function (eachContact, index) {
@@ -34,9 +36,14 @@ const Contact = () => {
               <Link to={`/editContact/${eachContact.id}`}>
                 <span className="material-icons">edit</span>
               </Link>
-              <a href="#">
-                <span className="material-icons">remove_circle</span>
-              </a>
+              <>
+                <span
+                  onClick={() => dispatch(deleteContact(eachContact.id))}
+                  className="material-icons"
+                >
+                  remove_circle
+                </span>
+              </>
             </td>
           </tr>
         );
