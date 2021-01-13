@@ -24,9 +24,9 @@ function App() {
   });
   console.log(filteredData);
   return (
-    <main className="app">
+    <>
       {data && (
-        <>
+        <div className="coin-app">
           <div className="coin-search">
             <h1 className="coin-text">Search Currency</h1>
             <form>
@@ -49,13 +49,13 @@ function App() {
                 symbol={coin.symbol}
                 volume={coin.market_cap}
                 priceChange={coin.price_change_percentage_24h}
-                marketCap = {coin.total_volume}
+                marketCap={coin.total_volume}
               />
             );
           })}
-        </>
+        </div>
       )}
-    </main>
+    </>
   );
 }
 
